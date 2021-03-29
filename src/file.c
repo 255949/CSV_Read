@@ -25,6 +25,7 @@ int read_line(FILE ** fptr,char* data)
 
 void store_data(char **data,char * token)
 {
-    *data=malloc(strlen(data))
+    *data=malloc(strlen(data)+1);
+    strcpy(*data,token)
 }
 

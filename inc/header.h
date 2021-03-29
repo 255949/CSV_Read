@@ -28,16 +28,6 @@ typedef enum error_t
     SUCCESS=0
 }error_t;
 
-?
-/**
- * @brief  Function to read a line from csv file
- * 
- * @param fptr File pointer
- * @param data String for storing line of data
- * @return int 
- */
-int read_line(FILE ** fptr,char* data);
-
 /**
  * @brief File for allocation of memory based on size of token
  * 
@@ -45,5 +35,15 @@ int read_line(FILE ** fptr,char* data);
  * @param token Tokenized data from line by using ',' delimiter
  */
 void store_data(char **data,char * token);
+
+/**
+ * @brief Function to check presence of file in the directory
+ * 
+ * @param filename Name of file
+ * @param type Type of operation (Read,write etc.)
+ * @param fptr File Pointer
+ * @return error_t SUCCESS or FAILURE
+ */
+error_t open(char *filename,char *type, FILE **fptr);
 
 #endif
