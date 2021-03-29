@@ -1,5 +1,6 @@
 #include "header.h"
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
@@ -7,7 +8,7 @@ int main()
     char line[100];
     FILE* fptr=NULL;
     char* token;
-    if(open("data.csv","r",fptr)==SUCCESS)
+    if(open("data.csv","r",&fptr)==SUCCESS)
     {
         while(fgets(line,50,fptr)!=NULL)
         {
