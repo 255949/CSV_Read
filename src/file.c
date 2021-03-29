@@ -18,14 +18,9 @@ error_t open(char *filename,char *type, FILE **fptr)
         return SUCCESS;
 }
 
-int read_line(FILE ** fptr,char* data)
-{
-    return(fscanf(*fptr,"%s",data));
-}
-
 void store_data(char **data,char * token)
 {
     *data=malloc(strlen(data)+1);
-    strcpy(*data,token)
+    strcpy(*data,token);
 }
 
